@@ -1,3 +1,4 @@
 #!/bin/bash
-echo "hello world";
-echo "123";
+echo "I get raning ROBOT..."
+cd '/home/'$USER'/Документы/PRIMETOOLS/python/lerning/'
+python3 robot.py
