@@ -1,2 +1,2 @@
 #!/bin/bash/
-$i = 0
+echo "hello worls";
