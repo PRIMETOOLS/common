@@ -1,2 +1,2 @@
 #!/bin/bash/
-dfkslfk
+$i = 0
