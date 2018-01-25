@@ -1,4 +1,7 @@
 
+def lerrning():
+	print('123')
+
 
 def main():
 	pass
