@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+		  text-align: center;
+		  background: lightblue;
+		}
+
+		.btn {
+		  display: inline-block;
+		  margin: 1em;
+		  text-transform: uppercase;
+		  padding: 1em 1.5em;
+		  background: none;
+		  color:darkblue;  
+		  font-weight: bold;
+		  position: relative;
+		  transition:color 0.25s ease;
+		  border:3px solid white;
+		}
+
+		.btn:hover {
+		  color:red;
+		}
+
+		.btn::after {
+		  position: absolute;
+		  content: '';
+		  top:0;
+		  left: 0;
+		  width: 0;
+		  height: 100%;
+		  background-color: white;
+		  transform-origin: right;
+		  transition:width 0.25s ease;
+		  z-index: -1;
+		}
+
+		.btn:hover::after {
+		  width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+<button class="btn">button</button>
+
+</body>
+</html>
