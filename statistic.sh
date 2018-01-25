@@ -1,2 +1,3 @@
 #!/bin/bash/
-$i = 0
+$i = 0	
+Hello Word
