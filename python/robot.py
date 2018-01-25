@@ -1,7 +1,10 @@
 
 
 def main():
-	pass
+	print('Ochko')
+
+
+
 
 if __name__ == '__main__':
 	main()
