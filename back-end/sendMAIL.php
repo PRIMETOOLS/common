@@ -38,8 +38,14 @@ function randCode()
 {	
 	$h = date("H");
 	$m = date("i");
-
+	
+	#
 	$r = rand($h, $m);
+	#
+
+	#generations hash
+	$hash = md5($r)
+
 
 	return $r;
 }
@@ -47,7 +53,7 @@ function randCode()
 
 function mailPrimeTools($user)
 {
-	mail("mail", "subject", "message");
+	#mail("mail", "subject", "message");
 }
 
 ?>
