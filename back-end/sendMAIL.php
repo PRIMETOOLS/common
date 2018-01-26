@@ -15,18 +15,6 @@ while($rowsr = mysqli_fetch_array($queryMessage)){
 
 #echo $user;
 while($row = mysqli_fetch_array($queryUsers)){
-		#echo $row['name'];
-		if($user != $row['name']){
-			$result = '0';
-			#echo $row['name'];
-		}else{
-			$result = '1';
-			#echo $user,$row['name'];
-		}
-		if($result = '0'){
-			echo '0';
-		}else{
-			echo '1';
-		}
+	if(trim($user) == trim($row['name'])) { echo "1";} else {echo "0";}
 }
 ?>
