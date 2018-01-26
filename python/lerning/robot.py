@@ -27,11 +27,6 @@ def lerrning(string):
 				print('К сожелению ответа на этот вопрос нет')
 			break
 
-			
-
-	
-
-
 def main():
 	a = lerrning('привет')
 
