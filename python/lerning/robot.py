@@ -24,7 +24,7 @@ def lerrning(string):
 			try:
 				print(y[i])
 			except:
-				print('К сожелению ответа на жтот вопрос нет')
+				print('К сожелению ответа на этот вопрос нет')
 			break
 
 			
