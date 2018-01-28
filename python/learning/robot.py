@@ -1,3 +1,5 @@
+import sys
+
 
 
 
@@ -28,7 +30,7 @@ def lerrning(string):
 			break
 
 def main():
-	a = lerrning('привет')
+	a = lerrning(sys.argv[1])
 
 
 
