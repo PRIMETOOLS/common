@@ -1,3 +1,5 @@
+import sys
+
 
 
 
@@ -27,16 +29,11 @@ def lerrning(string):
 				print(a)
 				print(y[i])
 			except:
-				print('К сожелению ответа на жтот вопрос нет')
+				print('К сожелению ответа на этот вопрос нет')
 			break
 
-			
-
-	
-
-
 def main():
-	a = lerrning('привет')
+	a = lerrning(sys.argv[1])
 
 
 
