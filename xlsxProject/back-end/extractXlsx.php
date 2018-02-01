@@ -1,10 +1,11 @@
 <?php
 
+$argname = $argv[1];
 #$mysqli = new mysqli("localhost","root","","test");
 
 #open CSV
 $fh = fopen("../dataXlsx/export_.csv", "r");
-
+#open CSV
 while ($line = fgetcsv($fh, 15795, ","))
 {
     $code = $line[0];
@@ -23,6 +24,10 @@ while ($line = fgetcsv($fh, 15795, ","))
     #$result = $mysqli->query($query);
     echo $product. PHP_EOL;
 }
+
+#Заносим данные о последнем изменении в лог
+exec('cd ../sh/; sh newLog.sh '.$argname);
+#Заносим данные о последнем изменении в лог
 
 
 #Закрываем
