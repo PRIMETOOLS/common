@@ -6,6 +6,7 @@ $argname = $argv[1];
 #open CSV
 $fh = fopen("../dataXlsx/export_.csv", "r");
 #open CSV
+
 while ($line = fgetcsv($fh, 15795, ","))
 {
     $code = $line[0];
