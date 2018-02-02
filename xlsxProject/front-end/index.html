@@ -94,11 +94,12 @@
 
 
 
-$.post('../php/getGoods.php'. {x: "all"}, newMeFunc)
+$.post('../php/getGoods.php',{x: "all", y: '1'}, newMeFunc)
 function newMeFunc(data){
+	//generatorData.addValue(data);
+	//generatorData.tableAdd();
 
 	console.log(data)
-
 }
 
 
