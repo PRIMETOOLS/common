@@ -1,0 +1,133 @@
+body {
+	margin: 0;
+}
+
+
+.head {
+	width: 100%;
+	height: 200px;
+	background-color: #b5b5b5;
+}
+
+
+#total_price {
+	display: flex;
+	width: 300px;
+    position: absolute;
+    right: 291px;
+}
+
+#block_total_amount {
+	display: flex;
+}
+
+#block_total_amount span {
+	margin-right: 8px;
+}
+
+
+
+#total_amount {
+ 	width: 60px;
+ 	height: 20px;
+ 	background-color: #fff;		
+}
+
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	
+}
+
+#index_1 {
+	width: 40px;
+}
+#index_2 {
+	width: 100px;
+}
+#index_1 {
+	width: 40px;
+}
+
+
+
+.column_content {
+	width: 100px;
+	border: solid blue 1px;
+	display: flex;
+	flex-direction: column;
+}
+
+.data_for_table {
+	width: auto;
+	padding: 2px 1px;
+	border-bottom: solid 1px blue;
+
+}
+
+.producer_refrences {
+	display: flex;
+	position: fixed;
+	bottom: 2px;
+	width: 100%;
+}
+
+.refrence {
+	width: 200px;
+	height: 20px;
+	border: solid #b90000 1px;
+	border-radius: 10px 10px 10px 10px;
+	margin: 0 2px 0 2px;
+	text-align: center;
+	padding: 3px;
+	background-color: #FFF;	
+}
+
+
+.img_refrences {
+    max-width: 300px;
+    height: 20px;
+}
+
+#hide_refrences {
+	font-size: 24px;
+    text-decoration: none;
+    margin: 8px 14px;
+}
+
+#ref_bot {
+	cursor: pointer;
+}
+
+/*
+input[type=text] {
+    width: 400px;
+    padding: 6px 3px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+*/
+
+
+
+input[type=text] {
+    width: 70px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./images/magnifier2.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 400px;
+}
