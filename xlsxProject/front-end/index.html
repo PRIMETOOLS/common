@@ -1,29 +1,21 @@
  <!DOCTYPE html>
  <html>
  <head>
+ 	<meta charset="utf-8">
  	<title>Price Online</title>
- 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
  </head>
  <body>
-<header>
-<link rel="stylesheet" type="text/css" href="style.css">
-</header>
-
-
-
-
-
-
-
 
 <div class='head'>
 	
-	<div style="float: left"><img src="./images/logotype-header.png"></img></div>
-	<form method="post" novalidate="true">
-		<input type="text" name="" >
-		<input type="submit" name="" style='height: 44px'>
-	</form>
+	<div id="logo" style="float: left"><img src="./images/logotype-header.png"></img></div>
 
+	<div class="search">
+		<input type="text" name="" >
+		<div class="search_submit">Поиск</div>
+	</div>
 	<div id='total_price'>
 		<div id='block_total_amount'><span>Общая сумма</span><div id='total_amount'></div></div>
 	</div>
@@ -102,6 +94,7 @@
 var generatorData = {
 	number: 'empty', 
 	code: 'empty',
+	discription: 'empty',
 	articul: 'empty',
 	pictures: 'empty',
 	name: 'empty',
@@ -111,9 +104,10 @@ var generatorData = {
 	slot_1: 'empty',
 	slot_2: 'empty',
 	slot_3: 'empty',
-	addValue: function(number, code, articul, pictures, name, availability, order, dealer, slot_1, slot_2, slot_3){
+	addValue: function(number, code, discription, articul, pictures, name, availability, order, dealer, slot_1, slot_2, slot_3){
 		this.number = number || 'empty';
 		this.code = code || 'empty';
+		this.discription = discription || 'empty';
 		this.articul = articul || 'empty';
 		this.pictures = pictures || 'empty';
 		this.name = name || 'empty';
@@ -126,7 +120,7 @@ var generatorData = {
 
 	},	
 	tableAdd: function(){
-		var dataArray = [this.number, this.code, this.articul, this.pictures, this.name, this.availability, this.order, this.dealer, this.slot_1, this.slot_2, this.slot_3];
+		var dataArray = [this.number, this.code, this.discription, this.articul, this.pictures, this.name, this.availability, this.order, this.dealer, this.slot_1, this.slot_2, this.slot_3];
 		var list_div = document.getElementsByClassName('column_content');
 		for (num_col = 0; num_col < list_div.length; num_col ++){
 			var newBlock = document.createElement('div');

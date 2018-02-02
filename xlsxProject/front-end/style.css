@@ -9,6 +9,25 @@ body {
 	background-color: #b5b5b5;
 }
 
+#logo {
+	display: inline-block;
+}
+
+.search {
+	margin: 5px;
+	display: inline-block;
+	width: 500px;
+}
+
+.search_submit {
+	padding: 14px;
+	text-align: center;
+	background-color: #ccc;
+	display: inline-block;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
 
 #total_price {
 	display: flex;
@@ -24,6 +43,7 @@ body {
 #block_total_amount span {
 	margin-right: 8px;
 }
+
 
 
 
