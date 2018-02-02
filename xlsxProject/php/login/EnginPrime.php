@@ -2,8 +2,9 @@
 $login = '123';#$_POST['login'];
 $pass = '1332';#$_POST['pass'];
 
-class Data
-{
+class EnginPrime
+{	
+
 	function reStr($login,$pass)
 	{
 		$staf_login = htmlentities($login);
@@ -24,31 +25,31 @@ class Data
 		#переменная валидности
 
 		#запрос вывода логина и пароля пользователя
-		$check_query = 'SELECT * FROM users WHERE login = "'.$stack['login'].'" AND "'.$stack['pass'].'"';
+		#$check_query = 'SELECT * FROM users WHERE login = "'.$stack['login'].'" AND "'.$stack['pass'].'"';
 		#запрос вывода логина и пароля пользователя
 
 
 		#добавляем коннект
-		include('./connect.php');
+		#include('./connect.php');
 		#добавляем коннект
 
 		#исполняем QUERY
-		$lo_and_pass_chek = $mysqli->query($check_query);
+		#$lo_and_pass_chek = $mysqli->query($check_query);
 		#исполняем QUERY
 
 		#проверяем соотведствие
-		while($row = mysqli_fetch_array($lo_and_pass_chek))
-		{	
-			if($row['login'])
-			{
-				$data_sucsess = true;
-			}else{
-				$data_sucsess = false;
-			}
-		}
+		#while($row = mysqli_fetch_array($lo_and_pass_chek))
+		#{	
+		#	if($row['login'])
+		#	{
+		#		$data_sucsess = true;
+		#	}else{
+		#		$data_sucsess = false;
+		#	}
+		#}
 		#проверяем соотведствие
 
-		return $data_sucsess;
+		#return $data_sucsess;
 	}
 
 	function random_hash($login)
@@ -59,16 +60,27 @@ class Data
 
 		return $newHash;
 	}
+
+
+	
 }
 
 #object
-$data = new Data();
+$EnginPrime = new EnginPrime();
 #object
 
 
-$prepared_data = $data->reStr($login,$pass);
-#$data_checking_sql = $data->sql($prepared_data);
-$t = $data->random_hash('ads');
-echo $t;
+$prepared_data = $EnginPrime::reStr($login,$pass);
+$data_checking_sql = $EnginPrime::sql($prepared_data);
+
+
+if($data_checking_sql == true)
+{
+	$hashUsers_temporary = $EnginPrime::random_hash($data_checking_sql);
+}
+
+
+$EnginPrime::updateHashInUsers('asd','asd')
 
 ?>
+
