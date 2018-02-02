@@ -37,14 +37,16 @@
 	<div class='column_content' id='column_code'>
 	</div>
 
+	<div class='column_content' id='column_description'>
+	</div>
+
 	<div class='column_content' id='column_articul'>
 	</div>
 
 	<div class='column_content' id='column_pictures'>
 	</div>
 
-	<div class='column_content' id='column_name'>
-	</div>
+	
 	<div class='column_content' id='column_availability'>
 	</div>
 	<div class='column_content' id='column_order'>
@@ -91,6 +93,16 @@
 <script type="text/javascript">
 
 
+
+$.post('../php/getGoods.php'. {x: "all"}, newMeFunc)
+function newMeFunc(data){
+
+	console.log(data)
+
+}
+
+
+
 var generatorData = {
 	number: 'empty', 
 	code: 'empty',
@@ -104,13 +116,13 @@ var generatorData = {
 	slot_1: 'empty',
 	slot_2: 'empty',
 	slot_3: 'empty',
-	addValue: function(number, code, discription, articul, pictures, name, availability, order, dealer, slot_1, slot_2, slot_3){
+	addValue: function(number, code, discription, articul, pictures, availability, order, dealer, slot_1, slot_2, slot_3){
 		this.number = number || 'empty';
 		this.code = code || 'empty';
 		this.discription = discription || 'empty';
 		this.articul = articul || 'empty';
 		this.pictures = pictures || 'empty';
-		this.name = name || 'empty';
+		//this.name = name || 'empty';
 		this.availability = availability || 'empty';
 		this.order = order || 'empty';
 		this.dealer = dealer || 'empty';
@@ -120,7 +132,7 @@ var generatorData = {
 
 	},	
 	tableAdd: function(){
-		var dataArray = [this.number, this.code, this.discription, this.articul, this.pictures, this.name, this.availability, this.order, this.dealer, this.slot_1, this.slot_2, this.slot_3];
+		var dataArray = [this.number, this.code, this.discription, this.articul, this.pictures, this.availability, this.order, this.dealer, this.slot_1, this.slot_2, this.slot_3];
 		var list_div = document.getElementsByClassName('column_content');
 		for (num_col = 0; num_col < list_div.length; num_col ++){
 			var newBlock = document.createElement('div');
