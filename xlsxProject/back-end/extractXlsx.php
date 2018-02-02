@@ -20,14 +20,13 @@ while ($line = fgetcsv($fh, 15795, ","))
     $optO = $line[9];
 
 
-    // Insert the data into the sales table
-    //$query = "INSERT INTO goods SET id='".$code."',
-    //    client_id='".$product."', order_time='".$articyl."',
-	//    sub_total='".$nameTovars."', shipping_cost='".$nal."',
-    //    total_cost='".$opt."'";
+    
 
-    #$result = $mysqli->query($query);
-    echo $optT. PHP_EOL;
+    // Insert the data into the sales table
+    #$result = $mysqli->query("SET NAMES 'utf8'");
+    #$result = $mysqli->query("INSERT INTO goods SET code=".$code.", articul='".$articyl."', name='".$product."',availability=".$opis.", dealer5=".$optF.",dealer3=".$optT.", dealer2=".$optTU.", dealer1=".$optO);
+
+    echo $nameTovars. PHP_EOL;
 }
 
 #Заносим данные о последнем изменении в лог
@@ -37,6 +36,6 @@ exec('cd ../sh/; sh newLog.sh '.$argname);
 
 #Закрываем
 fclose($fh);
-//$mysqli->close();
+$mysqli->close();
 
 ?>

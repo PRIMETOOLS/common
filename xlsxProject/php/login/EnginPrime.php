@@ -1,21 +1,15 @@
 <?php
-$login = '123';#$_POST['login'];
-$pass = '1332';#$_POST['pass'];
 
 class EnginPrime
 {	
 
-	function reStr($login,$pass)
+	function reStr($str)
 	{
-		$staf_login = htmlentities($login);
-		$staf_pass = htmlentities($pass);
+		$staf_str = htmlentities($str);
 
-		$stafe__login = preg_replace('![^\w\d\s]*!','',$staf_login);
-		$staf__pass = preg_replace('![^\w\d\s]*!','',$staf_pass);
+		$stafe__str = preg_replace('![^\w\d\s]*!','',$staf_str);
 
-		$stack = array('login' => $stafe__login, 'pass' => $staf__pass);
-
-		return $stack;
+		return $stafe__str;
 	}
 
 	function sql($stack)
@@ -60,27 +54,7 @@ class EnginPrime
 
 		return $newHash;
 	}
-
-
 	
 }
-
-#object
-$EnginPrime = new EnginPrime();
-#object
-
-
-$prepared_data = $EnginPrime::reStr($login,$pass);
-$data_checking_sql = $EnginPrime::sql($prepared_data);
-
-
-if($data_checking_sql == true)
-{
-	$hashUsers_temporary = $EnginPrime::random_hash($data_checking_sql);
-}
-
-
-$EnginPrime::updateHashInUsers('asd','asd')
-
 ?>
 
